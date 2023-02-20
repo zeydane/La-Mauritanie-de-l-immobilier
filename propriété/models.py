@@ -89,3 +89,12 @@ class Appartement(models.Model):
     def __str__(self):
         return self.title
 
+class Persons(models.Model):
+      idvalue = models.CharField(max_length=100)
+      fist_name = models.CharField(max_length=100)
+      last_name = models.CharField(max_length=100)
+      email = models.CharField(max_length=100)
+      avatar = models.ImageField(null=True,blank=True)
+
+      def __str__(self):
+            return self.fist_name

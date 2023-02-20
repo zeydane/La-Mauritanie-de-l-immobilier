@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Property, Property_Type, Property_Locate, Maison, Terrain, Appartement, Profile
+from .models import Persons, Property, Property_Type, Property_Locate, Maison, Terrain, Appartement, Profile
 
 
 class Property_TypeSerializer(ModelSerializer):
@@ -37,4 +37,7 @@ class AppartementSerializer(ModelSerializer):
         model = Appartement
         fields = '__all__'
 
-
+class PersonSerializer(ModelSerializer):
+    class Meta:
+        model = Persons 
+        fields = ['idvalue', 'first_name', 'last_name', 'email', 'avatar']
